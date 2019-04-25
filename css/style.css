@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro|Tinos');
+body {
+    max-width: 1100px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+header, body, p, div, nav {
+    margin: 0 auto;
+}
+
+header .logo {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 2,5px;
+    min-height: 353px;
+    background-image: url(../img/Books.jpg);
+    padding-top: 20px;
+    padding-left: 40px;
+}
+header nav ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    list-style-type: none;
+  /*background-color: #e7e7e7;*/
+  border: 1px solid grey;
+  padding: 14px 16px;
+}
+nav ul li a {
+  text-align: center;
+  padding: 14px 16px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Tinos', serif;
+  letter-spacing: 2,5px;
+}
+nav ul li a:hover {
+  background-color: #666;
+  color: white;
+}
+
+/*@media and all (min-width: 500px) {
+    header {
+        display: flex;
+        justify-content: center;
+}
+}*/
+main {
+    display: flex;
+}
+sidebar {
+    min-width: 20%;
+    overflow: auto;
+    background-color: #e7e7e7;
+
+}
+sidebar div {
+    display: block;
+    padding: 20px 10px;
+    text-align: justify;
+}
+sidebar div h3 {
+    text-align: left;
+}
+sidebar div a {
+    text-decoration: none;
+    color: #24282d;
+}
+sidebar div a :hover {
+    border: 2px solid white;
+}
+
+section {
+    max-width: 80%;
+}
+.wrapper {
+    /*display: flex;
+    align-content: space-between;*/
+    display: grid;
+    grid-template-columns: auto auto;
+}
+ .review img {
+    display: block;
+}
+section div article {
+  padding: 20px;
+  margin: auto;
+  text-align: justify;
+}
+
+section h2 {
+    display: inline-block;
+    font-family: 'Tinos', serif;
+    text-transform: uppercase;
+    margin: 30px 0 0 20px;
+}
+section article a img {
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  margin: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+section article img:hover {
+  color: #e7e77e;
+}
+
+
+
+
+
+
+
+
+
+
