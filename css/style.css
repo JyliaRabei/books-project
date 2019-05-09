@@ -1,92 +1,150 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro|Tinos');
 body {
-    max-width: 1100px;
+    width: 1100px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-header, body, p, div, nav {
+
+header,
+body,
+p,
+div,
+nav {
     margin: 0 auto;
 }
 
-header .logo {
+.toggle-nav {
+    display: none;
+}
+
+.logo {
     font-family: 'Lobster', cursive;
     font-size: 4rem;
     color: white;
-    letter-spacing: 2,5px;
+    letter-spacing: 2, 5px;
     min-height: 353px;
     background-image: url(../img/Books.jpg);
     padding-top: 20px;
     padding-left: 40px;
 }
-header nav ul {
+
+.menu ul {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
     list-style-type: none;
-  /*background-color: #e7e7e7;*/
-  border: 1px solid grey;
-  padding: 14px 16px;
-}
-nav ul li a {
-  text-align: center;
-  padding: 14px 16px;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Tinos', serif;
-  letter-spacing: 2,5px;
-}
-nav ul li a:hover {
-  background-color: #666;
-  color: white;
+    background-color: #e7e7e7;
+    border: 1px solid grey;
+    padding: 14px 16px;
 }
 
-/*@media and all (min-width: 500px) {
+.menu li {
+    margin: 0px 50px 0px 0px;
+    float: left;
+}
+
+nav ul li a {
+    text-align: center;
+    padding: 14px 16px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Tinos', serif;
+    letter-spacing: 2, 5px;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    color: white;
+}
+
+
+
+.search-form {
+    float: right;
+    display: inline-block;
+}
+
+.search-form input {
+    width: 200px;
+    height: 30px;
+    padding: 0px 8px;
+    float: left;
+    border-radius: 2px 0px 0px 2px;
+    font-size: 13px;
+}
+
+.search-form button {
+    height: 30px;
+    padding: 0px 7px;
+    float: right;
+    border-radius: 0px 2px 2px 0px;
+    background: #66a992;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/*@media screen and (min-width: 1100px) {
     header {
         display: flex;
         justify-content: center;
-}
 }*/
+
 main {
     display: flex;
 }
+
 sidebar {
     min-width: 20%;
     overflow: auto;
     background-color: #e7e7e7;
 
 }
+
 sidebar div {
     display: block;
     padding: 20px 10px;
     text-align: justify;
 }
+
 sidebar div h3 {
     text-align: left;
 }
+
 sidebar div a {
     text-decoration: none;
     color: #24282d;
 }
+
 sidebar div a :hover {
     border: 2px solid white;
 }
 
+/*@media (max-width: 650px) {
+    sidebar {
+        display: none;
+    }*/
+
 section {
     max-width: 80%;
 }
+
 .wrapper {
-    /*display: flex;
-    align-content: space-between;*/
+    display: flex;
+    align-content: space-between;
     display: grid;
     grid-template-columns: auto auto;
 }
- .review img {
+
+.review img {
     display: block;
 }
-section div article {
-  padding: 20px;
-  margin: auto;
-  text-align: justify;
+
+.review {
+    padding: 20px;
+    margin: auto;
+    text-align: justify;
 }
 
 section h2 {
@@ -95,24 +153,48 @@ section h2 {
     text-transform: uppercase;
     margin: 30px 0 0 20px;
 }
+
 section article a img {
-  border: 2px solid #e7e7e7;
-  border-radius: 5px;
-  margin: 5px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-section article img:hover {
-  color: #e7e77e;
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    margin: 5px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
+.review img:hover {
+    color: #e7e77e;
+}
 
+@media (max-width: 650px) {
+    .menu {
+        display: flex;
+    }
+    sidebar {
+        display: none;
+    }
+    .wrapper {
+        /*width: 100%;*/
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 
+.form {
+    align-items: center;
+    padding-top: 100px;
+}
 
+.form div {
+    background-color: grey;
+}
 
-
-
-
-
-
+input {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 5px 0;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
