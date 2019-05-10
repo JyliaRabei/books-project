@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Books Blog</title>
+  <title>Book Project</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,9 +20,8 @@
         <li><a href="#people">Особистості</a></li>
       </ul>
       <a class="toggle-nav" href="#">&#9776;</a>
-
       <form class="search-form">
-        <input type="text">
+        <input type="search" name="search">
         <button>Пошук</button>
       </form>
     </nav>
@@ -79,24 +78,22 @@
     </section>
   </main>
 
-   <div class="form">
-	<div>
-	<h2>Бажаєте стати нашим дописувачем?</h2>
-</div>
-  <form>
-  <label for="name">Ваше ім'я</label><br>
-  <input type="text" id="name" name="name"><br>
-  <label for="home">Електронна скринька</label><br>
-  <input type="text" id="home" name="home"><br>
-  <label for="item">Яка тема вас цікавить?</label><br>
-  <input type="textarea" id="item" name="item"><br>
-  <label for="phone">Телефон</label><br>
-  <input type="number" id="phone" name="phone">
-</form>
-</div>
-<footer>
+  <div class="questionary">
+      <form class="form" id="form" name="form">
+      <h2>Бажаєте стати нашим дописувачем?</h2>
+      <label for="name">Ваше ім'я</label><br>
+      <input type="text" name="name"><br>
+      <label for="email">Електронна скринька</label><br>
+      <input type="email" name="email"><br>
+      <label for="item">Яка тема вас цікавить?</label><br>
+      <textarea name="message" name="item"></textarea><br>
+      <input type="submit" value="Надіслати">
+    </form>
+  </div>
   
-</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script/index.js"></script>
 </body>
 
 </html>
