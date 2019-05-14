@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro|Tinos');
 body {
-    width: 1100px;
+    max-width: 980px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -12,6 +12,7 @@ div,
 nav {
     margin: 0 auto;
 }
+
 header .banner {
     display: flex;
     background-image: url(../img/Books.jpg);
@@ -21,58 +22,77 @@ header .banner {
     flex-direction: column;
     width: 100%;
     min-height: 353px;
-    
+
 }
+
 header .banner h1 {
-    
+
     font-family: 'Lobster', cursive;
     font-size: 4rem;
     color: white;
     letter-spacing: 2, 5px;
     padding-top: 20px;
     padding-left: 40px;
-} 
-.dropdown-menu {
-    background-color: #aeb3b7;
 }
 
-@media (max-width: 650px) {
-    header .menu {
-        display: flex;
-    }
-    .active {
-        flex: x1;
-    }
+.navbar-nav {
+    text-transform: uppercase;
+    color: grey;
+    font-size: 3.5vh;
+}
+
+.navbar-nav a {
+    display: block;
+    transition: all .5s linear 0s;
+}
+
+.navbar-nav a:hover {
+    display: block;
+    background-color: #e7e7e7;
+    background: hsl(0, 0%, 74%);
+}
+.dropdown-menu {
+    background-color: #e7e7e7;
 }
 
 main {
     display: flex;
 }
 
-sidebar {
-    min-width: 20%;
+aside {
+    max-width: 20%;
     overflow: auto;
     background-color: #e7e7e7;
 
 }
 
-sidebar div {
+aside .popular {
     display: block;
-    padding: 20px 10px;
+    padding: 25px 20px;
     text-align: justify;
 }
 
-sidebar div h3 {
+.popular h3,
+.popular-hiden h3 {
     text-align: left;
+    font-size: 3.5vh;
 }
 
-sidebar div a {
+.popular a {
+    display: block;
     text-decoration: none;
     color: #24282d;
+    box-shadow: hsl(0, 0%, 62%), 0 2px 7px hsl(0, 0%, 44%);
+    transition: all .4s linear 0s;
+
 }
 
-sidebar div a:hover {
-    color: grey;
+.popular a:hover {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: hsl(0, 0%, 74%);
+    box-shadow: hsl(0, 0%, 62%), hsl(0, 0%, 44%), 0 2px 10px hsl(0, 0%, 62%);
 }
 
 section {
@@ -80,14 +100,13 @@ section {
 }
 
 .wrapper {
-    display: flex;
-    align-content: space-between;
     display: grid;
     grid-template-columns: auto auto;
 }
 
 .review img {
     display: block;
+    width: 100%;
 }
 
 .review {
@@ -103,7 +122,7 @@ section h2 {
     margin: 30px 0 0 20px;
 }
 
-section article a img {
+.review a img {
     border: 2px solid #e7e7e7;
     border-radius: 5px;
     margin: 5px;
@@ -117,22 +136,74 @@ section article a img {
     color: #e7e77e;
 }
 
+.sidebar-hiden {
+    display: none;
+}
+
+.popular-hiden {
+    display: block;
+    padding: 25px 20px;
+    text-align: justify;
+    overflow: auto;
+    background-color: #e7e7e7;
+
+}
+
+.popular-hiden a {
+    display: block;
+    text-decoration: none;
+    color: #24282d;
+    box-shadow: hsl(0, 0%, 62%), 0 2px 7px hsl(0, 0%, 44%);
+    transition: all .4s linear 0s;
+
+}
+
+.popular-hiden a:hover {
+    color: white;
+    text-decoration: none;
+    background: hsl(0, 0%, 74%);
+    box-shadow: hsl(0, 0%, 62%), hsl(0, 0%, 44%), 0 2px 10px hsl(0, 0%, 62%);
+}
+
+
 @media (max-width: 650px) {
+    aside {
+        display: none;
+    }
 
     .wrapper {
-       display: grid;
+        display: grid;
         grid-template-columns: 1fr;
     }
+    .sidebar-hiden {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+}
+
+.ask-wrapper {
+    display: grid;
+    grid-template-columns: 20% 160px auto;
+    width: 100%;
+    border-top: 1px dotted grey;
+    /*justify-content: center;*/
 }
 
 .questionary {
-    display: flex;
+    grid-column: 2;
     align-items: center;
     padding-top: 70px;
-    border-top: 1px dotted grey;
+
 }
 
-
+@media (max-width: 650px) {
+    .ask-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 input {
     width: 510px;
@@ -141,28 +212,23 @@ input {
     border: 1px solid grey;
     border-radius: 4px;
 }
+
 .questionary button {
     height: 50px;
     width: 150px;
     padding: 5px 8px;
     border-radius: 0px 3px 3px 0px;
-    background: grey;
     font-size: 15px;
     font-weight: 600;
     color: white;
+    background: grey;
+    box-shadow: hsl(0, 0%, 62%), 0 2px 7px hsl(0, 0%, 44%);
+    transition: all .4s linear 0s;
+
 }
 
 .questionary button:hover {
-    background-color: black;
-    color: white
-
-
-
-
-
-
-
-
-
-
-
+    background-color: #78909c;
+    color: white;
+    box-shadow: hsl(0, 0%, 62%), hsl(0, 0%, 44%), 0 2px 10px hsl(0, 0%, 62%);
+}

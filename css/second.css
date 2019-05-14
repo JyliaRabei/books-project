@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro|Tinos');
+body {
+    max-width: 980px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header,
+body,
+p,
+sidebar,
+div,
+nav {
+    margin: 0 auto;
+}
+.navbar-brand {
+     font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    /*letter-spacing: 1px;*/
+}
+.navbar-nav {
+    text-transform: uppercase;
+    font-size: 3.5vh;
+}
+
+.navbar-nav a {
+    display: block;
+    transition: all .5s linear 0s;
+}
+
+.container {
+    position: relative;
+  text-align: center;
+}
+.container img {
+    max-width: 100%;
+}
+.centered {
+  position: absolute;
+  top: 20px;
+ left: 20px;
+  color: white;
+}
+
+
+
+
+
+.navbar-nav a:hover {
+    display: block;
+    background-color: #e7e7e7;
+    background: hsl(0, 0%, 74%);
+}
+.dropdown-menu {
+    background-color: #e7e7e7;
+}
+
+
+
